@@ -1,0 +1,46 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "En desarrollo ...",
+    title: "Front End Developer",
+    company: "Sindicato Único de Trabajadores de Colegio de Bachilleres del Estado de Baja California Sur.",
+    description:
+      "Creación del lado del cliente UI, para la bolsa de trabajo para los trabajadores del Sindicato del colegio de bachilleres de B.C.S. ",
+    
+  },
+  {
+    date: "Febrero 2023 - Actual...",
+    title: "Back End Developer",
+    company: "Sindicato Único de Trabajadores de Colegio de Bachilleres del Estado de Baja California Sur.",
+    description:
+      "Creación de una API para la bolsa de trabajo para los trabajadores del Sindicato del colegio de bachilleres de B.C.S. ",
+    
+  },
+  {
+    date: "Julio 2022 - Noviembre 2022",
+    title: "Full Stack Developer",
+    company: "SESEA B.C.S.",
+    description:
+      "Desarrollo de un sistema web para la transparencia de la información del gobierno de B.C.S.",
+    
+  },
+  {
+    date: "Noviembre 2022 - Enero 2023",
+    title: "Full Stack Developer",
+    company: "SEA B.C.S.",
+    description:
+      "Desarrollo de un sistema web para la transparencia de la información del gobierno de B.C.S.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
