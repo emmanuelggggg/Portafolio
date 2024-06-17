@@ -12,6 +12,9 @@ import Laravel from "./icons/Laravel.astro"
 import Figma from "./icons/Figma.astro"
 import Astro1 from "./icons/Astro1.astro"
 import Nodejs from "./icons/Nodejs.astro"
+import Mysql from "./icons/Mysql.astro"
+import Mongo from "./icons/Mongodb.astro"
+import Mongodb from "./icons/Mongodb.astro"
 
 const TAGS = {
   BOOTSTRAP: {
@@ -59,31 +62,48 @@ const TAGS = {
     class: "bg-white text-green-700 border border-green-800 ",
     icon: Nodejs,
   },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-white text-orange-600 border border-blue-800 ",
+    icon: Mysql,
+  },
+  MONGODB: {
+    name: "Mongo DB",
+    class: "bg-white text-green-600 border border-blue-800 ",
+    icon: Mongodb,
+  },
+
 }
 const PROJECTS = [
   {
     title: "SESEA",
     link: "https://seseabcs.gob.mx/sesea/",    
     image: '/projects/sesea1.png',
-    tags: [ TAGS.BOOTSTRAP, TAGS.PHP, TAGS.JS ],
+    tags: [ TAGS.BOOTSTRAP, TAGS.PHP, TAGS.JS, TAGS.MYSQL ],
   },
   {
     title: "SEA",
     link: "https://www.seabcs.gob.mx/",
     image: "/projects/sea1.png",
-    tags: [TAGS.BOOTSTRAP, TAGS.PHP, TAGS.JS],
+    tags: [TAGS.BOOTSTRAP, TAGS.PHP, TAGS.JS,TAGS.MYSQL],
   },
   {
     title: "EDITEST",
     link: "#",
     image: "/projects/edi1.png",
-    tags: [TAGS.TAILWIND, TAGS.LARAVEL, TAGS.JS],
+    tags: [TAGS.TAILWIND, TAGS.LARAVEL, TAGS.JS, TAGS.MYSQL, TAGS.FIGMA],
+  },
+  {
+    title: "FIAGMA",
+    link: "#",
+    image: "/projects/fiagma.png",
+    tags: [TAGS.TAILWIND, TAGS.LARAVEL, TAGS.JS, TAGS.MYSQL, TAGS.FIGMA],
   },
   {
     title: "S.U.T.C.B.E.B.C.S",
     link: "#",
     image: "/projects/cb.png",
-    tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.FIGMA,TAGS.NODE],
+    tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.FIGMA,TAGS.NODE,TAGS.MONGODB],
   },
 ]
 ---
@@ -107,7 +127,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full m-1 text-xs ${tag.class} py-1 px-2 `}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
